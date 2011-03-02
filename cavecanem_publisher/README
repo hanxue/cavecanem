@@ -1,0 +1,16 @@
+Cave Canem Publisher Requires:
+- libgtop-2.0
+- NDDS 4.5c
+- Boost 1.38
+
+
+Installation Instructions:
+
+$ ./configure --sysconfdir=/etc --prefix=/usr
+
+NOTE: It is recomended to install Cave Canem adding --sysconfdir=/etc and 
+--prefix=/usr to configure script if init.d scripts are going to be used.
+
+$ make
+
+# make install

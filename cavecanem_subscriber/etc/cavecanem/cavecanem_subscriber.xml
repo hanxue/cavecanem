@@ -1,0 +1,65 @@
+<!-- Database description 
+     ==============================
+     !-->
+
+<general>
+  <qos_file>cavecanem_subscriber_qos.xml</qos_file>
+</general>
+
+<database>
+	<server>localhost</server>
+	<name>cavecanem</name>
+	<user>cavecanem</user>
+	<password>cavecanem</password>
+</database>
+
+<!--Plugins
+    ===========================================
+
+!-->
+
+<plugins>
+  <my_disk>
+    <plugin_id>my_disk</plugin_id>
+    <plugin_type>disk</plugin_type>
+    <lib_name>libcavecanem_subscriber_disk.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>filesystem</topic_name>
+    <qos_library>NddsQosProfilesLibrary</qos_library>
+    <qos_profile>tbf</qos_profile>
+    <filter_expresion>none</filter_expresion>
+    <max_rows>10</max_rows>
+  </my_disk>
+  <my_system_monitor>
+    <plugin_id>my_system_monitor</plugin_id>
+    <plugin_type>system_monitor</plugin_type>
+    <lib_name>libcavecanem_subscriber_system_monitor.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>sysmon_status</topic_name>
+    <qos_library>NddsQosProfilesLibrary</qos_library>
+    <qos_profile>tbf</qos_profile>
+    <filter_expresion>none</filter_expresion>
+    <max_rows>10</max_rows>
+  </my_system_monitor>
+  <my_net_load>
+    <plugin_id>my_net_load</plugin_id>
+    <plugin_type>net_load</plugin_type>
+    <lib_name>libcavecanem_subscriber_net_load.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>net_load</topic_name>
+    <qos_library>NddsQosProfilesLibrary</qos_library>
+    <qos_profile>tbf</qos_profile>
+    <filter_expresion>none</filter_expresion>
+    <max_rows>10</max_rows>
+  </my_net_load>
+  <my_ids>
+    <plugin_id>my_ids</plugin_id>
+    <plugin_type>ids</plugin_type>
+    <lib_name>libcavecanem_subscriber_ids.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>ids</topic_name>
+    <qos_library></qos_library>
+    <qos_profile>default</qos_profile>
+    <filter_expresion>none</filter_expresion>
+  </my_ids>
+</plugins>

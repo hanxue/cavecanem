@@ -1,0 +1,56 @@
+<!--General Publisher Configuration
+    ===============================
+    <publishing_period>
+    <qos_file>
+
+
+-->
+
+<general>
+  <publishing_period>3</publishing_period>
+  <qos_file>cavecanem_publisher_qos.xml</qos_file>
+</general>
+
+
+<plugins>
+  <my_disk>
+    <plugin_id>my_disk</plugin_id>
+    <plugin_type>disk</plugin_type>
+    <lib_name>libcavecanem_publisher_disk.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>filesystem</topic_name>
+    <qos_library></qos_library>
+    <qos_profile>default</qos_profile>
+  </my_disk>
+
+  <my_net_load>
+    <plugin_id>my_net_load</plugin_id>
+    <plugin_type>net_load</plugin_type>
+    <lib_name>libcavecanem_publisher_net_load.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>net_load</topic_name>
+    <qos_library></qos_library>
+    <qos_profile>default</qos_profile>
+  </my_net_load>
+
+  <my_system_monitor>
+    <plugin_id>my_system_monitor</plugin_id>
+    <plugin_type>system_monitor</plugin_type>
+    <lib_name>libcavecanem_publisher_system_monitor.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>sysmon_status</topic_name>
+    <qos_library></qos_library>
+    <qos_profile>default</qos_profile>
+  </my_system_monitor>
+
+  <my_snort>
+    <plugin_id>my_snort</plugin_id>
+    <plugin_type>snort</plugin_type>
+    <lib_name>libcavecanem_publisher_snort.so</lib_name>
+    <domain_id>3</domain_id>
+    <topic_name>ids_alert</topic_name>
+    <qos_library></qos_library>
+    <qos_profile>default</qos_profile>
+    <log_file>/var/log/snort/alert.csv</log_file>
+  </my_snort> 
+</plugins>

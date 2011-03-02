@@ -1,0 +1,28 @@
+//@top-level false
+typedef struct host_info {
+  string hostname;
+  string sysname;
+  string release_name;
+  string machine;
+} host_info_t;
+
+struct netload {
+  host_info_t host; //@key
+  string device; //@key
+  long flags;
+  long if_flags;
+  long mtu;
+  string subnet_str;
+  string address_str;
+  long packets_in;
+  long packets_out;
+  long packets_total;
+  long bytes_in;
+  long bytes_out;
+  long bytes_total;
+  long errors_in;
+  long errors_out;
+  long errors_total;
+  long collisions;
+  string hwaddress_str;
+};

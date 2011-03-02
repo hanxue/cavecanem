@@ -1,0 +1,34 @@
+//@top-level false
+typedef struct host_info {
+  string hostname;
+  string sysname;
+  string release_name;
+  string machine;
+} host_info_t;
+
+//@top-level false
+typedef struct node_info {
+  unsigned short prt;
+  string<15> network_addr;
+  string<17> mac;	
+} node_info_t;
+
+//@top-level false
+typedef struct timestamp {
+  unsigned short year;
+  unsigned short mon;
+  unsigned short mday;
+  unsigned short hour;
+  unsigned short min;
+  unsigned short sec;
+} timestamp_t;
+
+struct ids_alert {
+  host_info_t host;
+  node_info_t source;
+  node_info_t target;
+  //protocol_info protocol;
+  timestamp_t ts;
+  string msg;	
+  string timestamp_string;
+};
