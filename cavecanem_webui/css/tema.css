@@ -1,0 +1,396 @@
+@charset "utf-8";
+/* CSS Document for Praisecorp July 08 */
+
+
+/* Default HTML Styles **********/
+*{
+margin:0px;
+padding:0px;
+}
+
+html{
+height:100%;
+margin:0px 0px 1px 0px;
+}
+body{
+font-family:Arial, Helvetica, sans-serif;
+font-size:76%;
+line-height:1.5em;
+color:#666666;
+padding:2em 0px;
+}
+img{
+border:none;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote,form,label,ul,ol,dl,fieldset,address {
+margin: 0.5em 0; 
+}
+li,dd, ul, ol { 
+margin-left:1em;
+}
+fieldset { 
+padding:.5em; 
+border:0px;
+}
+a{
+/*border-bottom: 1px dotted #666;*/
+text-decoration:none;
+cursor: pointer; 
+color:#666;
+}
+a:hover{
+text-decoration:none;
+color:#000;
+
+}
+h1, h2, h3, h4, h5, h6, .componentheading, .contentheading, .contentdescription{
+font-weight:bold;
+}
+h1,.componentheading{
+font-size:2em;
+line-height:2em;
+}
+h2,.contentheading{
+font-size:1.2em;
+line-height:1.2em;
+}
+h3, .contentdescription{
+font-size:1.1em;
+}
+h4{
+font-size:1.1em;
+}
+h5{
+font-size:1.1em;
+}
+h6{
+font-size:1em;
+font-weight:bold;
+}
+#footer,.small,.createdate,.modifydate,.mosimage_caption{
+font:0.8em Arial,Helvetica,sans-serif;
+color:#999;
+}
+.contentpaneopen, .blog{
+width:100%;
+}
+
+
+
+/* Layout Styles */
+.inside{
+padding:10px;
+}
+.clr{
+clear:both;
+}
+#wrapper{
+width:870px;
+margin:0px auto;
+background:#CCCCCC;
+}
+#wrapper-inner{
+background:#FFFFFF;
+}
+#wrapper-inner .inside{
+padding:0px 10px;
+}
+#header{
+border-bottom:1px solid #CCCCCC;
+margin:0px 0px 5px 0px;
+padding:0px 0px 10px 0px;
+}
+#logo{
+float:center;
+display:block;
+width:285px;
+height:85px;
+background:url(../images/fsoft.png) no-repeat 0px 0px;
+}
+#navigation{
+background:#333333;
+}
+#elements{
+font-size:0.9em;
+border-bottom:1px solid #CCCCCC;
+padding:5px 0px 5px 0px;
+margin:0px 0px 10px 0px;
+}
+#container{}
+#top{
+border-bottom:1px solid #CCCCCC;
+padding:0px 0px 10px 0px;
+margin:0px 0px 10px 0px;
+}
+#content{
+float:left;
+width:100%;
+}
+
+#footer{
+color:#FFFFFF;
+width:99%;
+margin:0px auto;
+padding:10px 0px 10px 10px;
+border-top:1px solid #CCCCCC;
+}
+
+#link{
+float:right;
+width:45%;
+text-align:right;
+}
+
+/* Menu Styles */
+#navigation ul{
+padding-left:10px;
+padding-right:10px;
+margin:0px;
+list-style:none;
+}
+#navigation li{
+padding:0px;
+margin:0px;
+list-style:none;
+display:inline;
+}
+#navigation a:link, #navigation a:active, #navigation a:visited{
+color:#FFFFFF;
+display:block;
+float:left;
+padding:5px 10px;
+}
+#navigation a:hover, #navigation #current a{
+color:#FFFFFF;
+text-decoration:none;
+background:#4779B6;
+}
+#link ul{
+padding:0px;
+margin:0px;
+list-style:none;
+}
+#link li{
+padding:0px;
+margin:0px;
+list-style:none;
+display:inline;
+}
+#link a:link, #link a:active, #link a:visited{
+color:#FFFFFF;
+padding:0px 10px;
+}
+#link a:hover, #link #current a{
+color:#CCCCCC;
+}
+
+
+#fondo {
+
+background:#efe;
+width:70%;
+
+margin-right:15%;
+margin-left:15%;
+margin-bottom:10px;
+border-bottom:1px solid #CCCCCC;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+
+padding-top:10px;
+padding-right:10px;
+padding-left:10px:
+
+}
+
+#canal{
+float:left;
+background:#000;
+margin-right:20px;
+margin-left:20px;
+margin-bottom:15px;
+width:150px;
+height:50px;
+vertical-align:middle;
+text-align:center;
+border-bottom:1px solid #CCCCCC;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+}
+
+
+/*
+  CSS - table design
+  Copyright (c) 2005 Patryk Zawadzki <patrys AT pld-linux org>
+  Feel free to use
+*/
+table.main
+{
+	background: #fff;
+	border: 0;
+	color: #666;
+	font: normal 85%/150%;
+	width: 100%;
+
+}
+
+/* table.scroll  */
+/* { */
+/*   display: block; */
+/*   height: 500px; */
+/*   width: 100%; */
+/*   overflow-y: scroll; */
+/* } */
+
+
+tr.normal:nth-child(even) {
+    background: #fff;
+}
+caption
+{
+	background: #4779B6;
+	-moz-border-radius: 8px;
+	color: #fff;
+	font-size:11pt;
+	font-weight: bold;
+	margin: 4px 0 4px;
+	padding: 1em;
+	text-align: center;
+}
+
+caption a
+{
+	content:"\00A0\00BB";
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+
+caption a:hover {
+    color: #fff;
+}
+
+
+
+td, th
+{
+	padding: 1em .5em;
+}
+th
+{
+	background: #9CA2CB;
+	border-left: 2px solid #4779B6;
+	-moz-border-radius: 8px;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+th a
+{
+    color:#fff;
+    text-decoration:underline;
+}
+th a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+th a:active{
+    color:#fff;
+    text-decoration:none;
+}
+th a:visited:after {
+    text-decoration:underline;
+}
+tbody td a
+{
+	border-bottom: 1px dotted #666;
+	color: #666;
+	text-decoration: none;
+}
+tbody td a:after
+{
+	content:"\00A0\00BB";
+}
+tbody th a
+{
+	border-bottom: 1px dotted #fff;
+	color: #fff;
+	font-weight:bold;
+	text-decoration: none;
+}
+tbody th a:hover
+{
+	border-bottom: 1px dotted #333;
+	color: #000;
+}
+tbody th a:visited:after
+{
+/*	content:"\00A0\221A";*/
+}
+tbody th a:visited
+{
+	border-bottom: 0 none;
+}
+tbody th, tbody td
+{
+	text-align: left;
+	vertical-align: middle;
+
+}
+
+
+tfoot td, tfoot th
+{
+	background: #4779B6;
+	-moz-border-radius: 8px;
+	color: #fff;
+}
+
+tbody tr a
+{
+    color: #000;
+
+}
+tbody tr:nth-child(even)
+{
+    background-color: #eee;
+}
+tbody tr:hover td
+{
+	color: #333;
+
+}
+tbody tr:hover td a
+{
+	border-bottom: 1px dotted #333;
+	color: #333;
+}
+tbody tr:hover td a:hover
+{
+	border-bottom: 1px dotted #000;
+	color: #000;
+}
+tbody tr:hover th
+{
+	color: #333;
+	background: #C5CCDC;
+}
+
+div.pathway {
+	margin-bottom: 1em;
+}
+div.pathway a {
+    text-decoration:underline;
+}
+
+
+div.scroll {
+/* height: 200px; */
+width: 800px;
+overflow: auto;
+/* border: 1px solid #666; */
+background-color: #fff;
+}
+

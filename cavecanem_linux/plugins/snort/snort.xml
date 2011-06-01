@@ -1,0 +1,33 @@
+<plugin name="snort">
+  <dll>snort</dll>
+  <create_function>create_snort</create_function>
+  <publishing_period_sec>3</publishing_period_sec>
+  <dds_properties>
+    <dds_qos_library>none</dds_qos_library>
+    <dds_qos_profile>default</dds_qos_profile>
+    <dds_topic_name>ids_alert</dds_topic_name>
+    <!-- <datawriter_qos> -->
+    <!-- </datawriter_qos> -->
+  </dds_properties>
+  
+  <plugin_config>
+    <plugin_element name="log_file">/var/log/snort/alert.csv</plugin_element>
+  </plugin_config>
+  
+  <type_definition type_name="ids_alert">
+    <struct name="node_info" topLevel="false">
+      <member name="prt" type="long"/>
+      <member name="network_addr" stringMaxLength="15" type="string"/>
+      <member name="mac" stringMaxLength="17" type="string"/>
+    </struct>
+    <typedef name="node_info_t" type="nonBasic" nonBasicTypeName="node_info" topLevel="false"/>
+    <struct name="ids_alert">
+      <member name="hostname" type="string" stringMaxLength="100" key="true"/>
+      <member name="source" type="nonBasic" nonBasicTypeName="node_info_t"/>
+      <member name="target" type="nonBasic" nonBasicTypeName="node_info_t"/>
+      <member name="ts" type="long" key="true"/>
+      <member name="msg" type="string" stringMaxLength="512" key="true"/>
+    </struct>
+  </type_definition>
+  
+</plugin>

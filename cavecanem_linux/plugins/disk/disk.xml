@@ -1,0 +1,56 @@
+<plugin name="disk">
+  <dll>disk</dll>
+  <create_function>create_disk</create_function>
+  <publishing_period_sec>5</publishing_period_sec>
+  <dds_properties>
+    <!-- <dds_qos_library>testing</dds_qos_library> -->
+    <!-- <dds_qos_profile>test</dds_qos_profile> -->
+
+    <datawriter_qos>
+      <reliability>
+    	<kind>RELIABLE_RELIABILITY_QOS</kind>
+    	<max_blocking_time>
+    	  <sec>60</sec>
+    	</max_blocking_time>
+      </reliability>
+      <deadline>
+    	<period>
+    	  <sec>4</sec>
+	  <nanosec>0</nanosec>
+    	</period>
+      </deadline>
+      <history>
+    	<kind>KEEP_ALL_HISTORY_QOS</kind>
+      </history>
+
+      <resource_limits>
+    	<max_samples>50</max_samples>
+      </resource_limits>
+
+      <protocol>
+    	<rtps_reliable_writer>
+    	  <min_send_window_size>50</min_send_window_size>
+    	  <max_send_window_size>50</max_send_window_size>
+    	</rtps_reliable_writer>
+      </protocol>
+    </datawriter_qos>
+
+  </dds_properties>
+  
+  <plugin_config></plugin_config>
+
+    <type_definition type_name="disk">
+      <struct name="disk">
+      	<member name="hostname" type="string" stringMaxLength="100" key="true"/>
+	<member name="ts" type="long"/>
+	<member name="name" type="string" stringMaxLength="200" key="true"/>
+	<member name="mountdir" type="string" stringMaxLength="200"/>
+	<member name="total" type="long"/>
+	<member name="used" type="long"/>
+	<member name="free" type="long"/>
+	<member name="used_per" type="double"/>
+	<member name="free_per" type="double"/>
+      </struct>
+    </type_definition>
+
+</plugin>
